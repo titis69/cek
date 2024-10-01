@@ -11,7 +11,7 @@ NC='\e[0m'
 ipsaya=$(curl -sS ipv4.icanhazip.com)
 data_server=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 date_list=$(date +"%Y-%m-%d" -d "$data_server")
-data_ip="https://raw.githubusercontent.com/denisa32/izin/main/ip"
+data_ip="https://raw.githubusercontent.com/titis69/permission/main/ip"
 checking_sc() {
   useexp=$(wget -qO- $data_ip | grep $ipsaya | awk '{print $3}')
   if [[ $date_list < $useexp ]]; then
@@ -122,10 +122,10 @@ fi
 ######################################
 # // USERNAME IZIN IPP
 rm -f /usr/bin/user
-username=$(curl -sS https://raw.githubusercontent.com/denisa32/izin/main/ip | grep $MYIP | awk '{print $2}')
+username=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $MYIP | awk '{print $2}')
 echo "$username" >/usr/bin/user
 rm -f /usr/bin/e
-valid=$(curl -sS https://raw.githubusercontent.com/denisa32/izin/main/ip | grep $MYIP | awk '{print $3}')
+valid=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $MYIP | awk '{print $3}')
 echo "$valid" > /usr/bin/e
 clear
 ######################################
@@ -352,7 +352,7 @@ case $hallo in
 6) clear ; m-ssr ;; # menu sadowsocks
 7) clear ; Rename ;; # menu noobzvps
 8) clear ; m-bot ;; # menu bot telegram
-9) clear ; wget -q https://raw.githubusercontent.com/denisa32/sc/main/update.sh && bash update.sh ;; #Update script
+9) clear ; wget -q https://raw.githubusercontent.com/titis69/gantipsswd/main/update.sh && bash update.sh ;; #Update script
 10) clear ; m-ftr ;; # menu managers
 11) clear ; uuid ;;
 12) clear ; uuidtrojan ;;
